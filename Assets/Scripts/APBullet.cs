@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
-public class Bullet : MonoBehaviour
+public class APBullet : MonoBehaviour
 {
     [SerializeField]
     private int damage = 1;

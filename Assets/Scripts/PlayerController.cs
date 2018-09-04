@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Object bulletGO;
 
+    [SerializeField]
+    private Object bulletAP;
+
     protected bool InsideCamera(bool positive)
     {
         float direction = positive ? 1F : -1F;
@@ -41,10 +44,15 @@ public class PlayerController : MonoBehaviour
             transform.position += new Vector3(movementFactor * speed * Time.deltaTime, 0F, 0F);
         }
 
-        if (bulletGO != null && Input.GetAxis("Jump") != 0 && canFire)
+        if (bulletGO != null && Input.GetAxis("Fire1") != 0 && canFire)
         {
             Instantiate(bulletGO, transform.position + (transform.up * 0.5F), Quaternion.identity);
-            print("Fiyah!");
+            StartCoroutine("FireCR");
+        }
+
+        if (bulletAP != null && Input.GetAxis("Fire2") != 0 && canFire)
+        {
+            Instantiate(bulletAP, transform.position + (transform.up * 0.5F), Quaternion.identity);
             StartCoroutine("FireCR");
         }
     }
