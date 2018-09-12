@@ -1,0 +1,11 @@
+Feedback
+
+Examen (4.9/5.0)
+ * Se satisface todo el enunciado.
+ * Hay un NullReference sin validar cuando el hazard es destruido por un APBullet. En ese 'if' no se hace el get del text.
+
+Bonificación (0.2/0.5)
+ * Hay UI que cuenta los hazards destruidos.
+ *  +0.1 por el cariñito de los shelters y el escalado de los Invaders al morir.
+
+Total: 4.9 / 5.0 + 0.2
